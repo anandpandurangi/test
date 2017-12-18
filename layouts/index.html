@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anand's test</title>
+</head>
+<body>
+<ul>
+    {{ $gistJ := getJSON "https://raw.githubusercontent.com/anandpandurangi/datarepo/master/data.json" }}
+    {{ range $gistJ }}
+    <li>{{ .name }}</li>
+    {{ end }}
+</ul>
+</body>
+</html>
